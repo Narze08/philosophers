@@ -20,16 +20,18 @@ void	init_philos(t_philo *philos, t_program *program, pthread_mutex_t *forks,
 		char **argv)
 {
 	int	i;
+	size_t start_time;
 
 	i = 0;
+	start_time = get_current_time();
 	while (i < ft_atoi(argv[1]))
 	{
 		philos[i].id = i + 1;
 		philos[i].eating = 0;
 		philos[i].meals_eaten = 0;
 		init_input(&philos[i], argv);
-		philos[i].start_time = get_current_time();
-		philos[i].last_meal = get_current_time();
+		philos[i].start_time = start_time;
+		philos[i].last_meal = start_time;
 		philos[i].write_lock = &program->write_lock;
 		philos[i].dead_lock = &program->dead_lock;
 		philos[i].meal_lock = &program->meal_lock;

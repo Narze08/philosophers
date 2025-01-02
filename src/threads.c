@@ -18,6 +18,9 @@ void	*philo_routine(void *pointer)
 	t_philo	*philo;
 
 	philo = (t_philo *)pointer;
+	// pthread_mutex_lock(philo->meal_lock);
+	// philo->last_meal= get_current_time();
+	// pthread_mutex_unlock(philo->meal_lock);
 	if (philo->id % 2 == 0)
 		ft_usleep(1);
 	while (!dead_loop(philo))
@@ -49,12 +52,12 @@ int	thread_create(t_program *program, pthread_mutex_t *forks)
 	i = 0;
 	//if (pthread_join(observer, NULL) != 0)
 	//	destory_all("Thread join error", program, forks);
-	while (i < program->philos[0].num_of_philos)
-	{
-		if (pthread_join(program->philos[i].thread, NULL) != 0)
-			destory_all("Thread join error", program, forks);
-		i++;
-	}
+	// while (i < program->philos[0].num_of_philos)
+	// {
+	// 	if (pthread_join(program->philos[i].thread, NULL) != 0)
+	// 		destory_all("Thread join error", program, forks);
+	// 	i++;
+	// }
 	monitor(program->philos);
 	return (0);
 }
