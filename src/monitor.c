@@ -1,7 +1,5 @@
 #include "philo.h"
 
-// Print message funtion
-
 void	print_message(char *str, t_philo *philo, int id)
 {
 	size_t	time;
@@ -75,8 +73,6 @@ int	check_if_all_ate(t_philo *philos)
 	}
 	return (0);
 }
-
-// Monitor thread routine
 
 void	*monitor(void *pointer)
 {
