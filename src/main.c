@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nazemzam <nazemzam@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/02 23:29:23 by nazemzam          #+#    #+#             */
+/*   Updated: 2025/01/02 23:29:27 by nazemzam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 // Checks that the input is only numbers
@@ -26,12 +38,12 @@ int	check_valid_args(char **argv)
 	if (ft_atoi(argv[2]) <= 0 || check_arg_content(argv[2]) == 1)
 		return (write(2, "INVALID TIME TO DIE\n", 20), 1);
 	if (ft_atoi(argv[3]) <= 0 || check_arg_content(argv[3]) == 1)
-		 return (write(2, "INVALID TIME TO EAT\n", 20), 1);
+		return (write(2, "INVALID TIME TO EAT\n", 20), 1);
 	if (ft_atoi(argv[4]) <= 0 || check_arg_content(argv[4]) == 1)
-		 return (write(2, "INVALID TIME TO SLEEP\n", 22), 1);
+		return (write(2, "INVALID TIME TO SLEEP\n", 22), 1);
 	if (argv[5] && (ft_atoi(argv[5]) < 0 || check_arg_content(argv[5]) == 1))
-		return (write(2, "INVALID NUMBER OF THE TIME OF EACH PHILOSOPHER MUST EAT\n",
-				56), 1);
+		return (write(2, "INVALID NUMBER OF THE TIME MUST EAT\n",
+				37), 1);
 	return (0);
 }
 // Main function

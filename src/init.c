@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nazemzam <nazemzam@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/03 02:49:40 by nazemzam          #+#    #+#             */
+/*   Updated: 2025/01/03 02:49:44 by nazemzam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 // Initializing the input from user
@@ -19,8 +31,8 @@ void	init_input(t_philo *philo, char **argv)
 void	init_philos(t_philo *philos, t_program *program, pthread_mutex_t *forks,
 		char **argv)
 {
-	int	i;
-	size_t start_time;
+	int		i;
+	size_t	start_time;
 
 	i = 0;
 	start_time = get_current_time();
